@@ -600,7 +600,7 @@ do
 
 			_G.StaticPopupDialogs["RAIDERIO_DEBUG_CONFIRM"] = {
 				text = ns.addonConfig.debugMode and L.DISABLE_DEBUG_MODE_RELOAD or L.ENABLE_DEBUG_MODE_RELOAD,
-				button1 = L.RELOAD,
+				button1 = L.CONFIRM,
 				button2 = L.CANCEL,
 				hasEditBox = false,
 				preferredIndex = 3,

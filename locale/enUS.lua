@@ -165,9 +165,9 @@ L.SEASON_LABEL_2 = "S2"
 L.USE_ENGLISH_ABBREVIATION = "Force English Abbreviations for Dungeons"
 L.USE_ENGLISH_ABBREVIATION_DESC = "When set, this will overrides the abbreviations used for dungeons to be the English versions, rather than your current language."
 L.CANCEL = "Cancel"
-L.RELOAD = "Reload"
---L.ENABLE_DEBUG_MODE_RELOAD = ""
---L.DISABLE_DEBUG_MODE_RELOAD = ""
---L.WARNING_DEBUG_MODE_ENABLE = ""
+L.CONFIRM = "Confirm"
+L.ENABLE_DEBUG_MODE_RELOAD = "You are enabling Debug mode. This is intended for testing purpose, and will cause additional memory usage."
+L.DISABLE_DEBUG_MODE_RELOAD = "Your are disabling debug mode."
+L.WARNING_DEBUG_MODE_ENABLE = "[|cffFFFFFF%s|r] Debug mode is enable for this addon. You may disable with this by typing |cffFFFFFF/raiderio debug|r"
 
 ns.L = L
