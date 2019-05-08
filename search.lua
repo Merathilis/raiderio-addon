@@ -100,6 +100,7 @@ local function GetNames(text, maxResults, cursorPosition)
 	local count
 	local name
 	local namel
+	local unique = {}
 	for i = 1, 2 do
 		if rcount >= maxResults then
 			break
@@ -116,8 +117,9 @@ local function GetNames(text, maxResults, cursorPosition)
 						end
 						name = data[j]
 						namel = name:lower()
-						if namel:find(text, nil, true) == 1 then
+						if not unique[namel] and namel:find(text, nil, true) == 1 then
 							rcount = rcount + 1
+							unique[namel] = true
 							temp[rcount] = {
 								name = name,
 								priority = 7,
