@@ -33,7 +33,7 @@ local addonConfig = {
 	lockProfile = false,
 	showRoleIcons = true,
 	profilePoint = { point = nil, x = 0, y = 0 },
-	devMode = false,
+	debugMode = false,
 }
 
 -- namespace config reference
@@ -599,7 +599,7 @@ do
 			_G["SLASH_" .. addonName .. "2"] = "/rio"
 
 			_G.StaticPopupDialogs["RAIDERIO_DEBUG_CONFIRM"] = {
-				text = ns.addonConfig.devMode and L.DISABLE_DEBUG_MODE_RELOAD or L.ENABLE_DEBUG_MODE_RELOAD,
+				text = ns.addonConfig.debugMode and L.DISABLE_DEBUG_MODE_RELOAD or L.ENABLE_DEBUG_MODE_RELOAD,
 				button1 = L.RELOAD,
 				button2 = L.CANCEL,
 				hasEditBox = false,
@@ -610,7 +610,7 @@ do
 				OnShow = nil,
 				OnHide = nil,
 				OnAccept = function ()
-					ns.addonConfig.devMode = not ns.addonConfig.devMode
+					ns.addonConfig.debugMode = not ns.addonConfig.debugMode
 					ReloadUI()
 				end,
 				OnCancel = nil

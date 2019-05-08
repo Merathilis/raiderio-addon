@@ -238,7 +238,7 @@ local function Init()
 		Frame:SetFrameStrata("DIALOG")
 		Frame:SetToplevel(true)
 
-		Frame:SetSize(310, ns.addonConfig.devMode and 130 or 100)
+		Frame:SetSize(310, ns.addonConfig.debugMode and 130 or 100)
 		Frame:SetPoint("CENTER")
 
 		Frame:SetBackdrop({
@@ -265,13 +265,13 @@ local function Init()
 		Frame.Search = Search
 	end
 
-	if ns.addonConfig.devMode then
+	if ns.addonConfig.debugMode then
 		regionBox:SetParent(Frame)
 	end
 	realmBox:SetParent(Frame)
 	nameBox:SetParent(Frame)
 
-	if ns.addonConfig.devMode then
+	if ns.addonConfig.debugMode then
 		regionBox:SetPoint("CENTER")
 		realmBox:SetPoint("TOP", regionBox, "BOTTOM", 0, 11)
 	else
