@@ -293,8 +293,13 @@ local function Init()
 			nameBox:SetFocus()
 			nameBox:HighlightText()
 		elseif self == nameBox then
-			regionBox:SetFocus()
-			regionBox:HighlightText()
+			if ns.addonConfig.debugMode then
+				regionBox:SetFocus()
+				regionBox:HighlightText()
+			else
+				realmBox:SetFocus()
+				realmBox:HighlightText()
+			end
 		end
 	end
 
