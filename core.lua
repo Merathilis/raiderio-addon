@@ -2000,7 +2000,7 @@ do
 			local data = dataProviderQueue[i]
 			local dataType = data.data
 
-			-- is this provider relevant?
+			-- is this provider relevant? (when in debug mode, provider for region different than yours are authorized)
 			if data.region == PLAYER_REGION or ns.addonConfig.debugMode == true then
 				if dataProvider[data.region] == nil then
 					dataProvider[data.region] = {}
@@ -2008,8 +2008,8 @@ do
 
 				local dataProviderGroup = dataProvider[data.region][dataType]
 
-				-- is the provider up to date?
 				if data.region == PLAYER_REGION then
+					-- is the provider up to date?
 					local isOutdated, outdatedHours, outdatedDays = IsProviderOutdated(data)
 					IS_DB_OUTDATED[dataType][data.faction] = isOutdated
 					OUTDATED_HOURS[dataType][data.faction] = outdatedHours

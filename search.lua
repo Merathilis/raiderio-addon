@@ -7,11 +7,12 @@ local RealmEditBox
 local NameEditBox
 local Tooltip
 
--- sort realms or names
+-- sort regions, realms or names
 local function SortReturn(a, b)
 	return a.name < b.name
 end
 
+-- Search region for activated provider
 local function GetRegions(text, maxResults, cursorPosition)
 	text = text:lower()
 
